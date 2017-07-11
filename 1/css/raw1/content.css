@@ -7,7 +7,7 @@
     margin: 0;
 }
 
-.content__img
+.content .content__img
 {
     float: left;
     height: 100%;
@@ -18,7 +18,7 @@
     
 }
 
-.content__text
+.content .content__text
 {
     float: right;
     height: 60%;
@@ -44,7 +44,7 @@
     line-height: 20px; 
 }
 
-.content__link
+.content .content__link
 {
     float: right;
     height: 40%;
