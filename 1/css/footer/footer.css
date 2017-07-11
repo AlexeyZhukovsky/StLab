@@ -7,7 +7,7 @@
     font-family: "Source Sans Pro";
 }
 
-.footer__text-block
+.footer .footer__text-block
 {
     font-size: 13pt;
     color: #fff;
@@ -31,7 +31,7 @@
     
 }
 
-.footer__hr
+.footer .footer__hr
  {
     border: none; 
     background-color: #9fd9e9; 
@@ -42,7 +42,7 @@
         
  }
 
- .footer__signature
+.footer .footer__signature
  {
      margin-top: 40px;
      margin-left: 30px;
