@@ -1,0 +1,28 @@
+.logo 
+{
+    width: 30%;
+    display: -webkit-inline-box;
+    font-family: "Lato";
+    color: #929292;
+    font-size: 12pt;  
+}
+
+.logo__text--big-dark-word
+{
+    font-weight: bolder;
+    color: #003d48;
+    font-size: 21pt;
+}
+
+.logo__text--big-red-word
+{
+    font-weight: lighter;
+    color: #f9968a;
+    font-size: 21pt;
+}
+
+.logo__img
+{
+    margin-top: 5px;
+    padding-right: 20px;
+}

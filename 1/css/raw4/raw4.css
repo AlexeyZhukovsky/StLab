@@ -1,0 +1,53 @@
+.raw-4
+{
+    height: 650px;
+}
+.raw-4-name
+{
+    height: 220px;
+    font-family: "Source Sans Pro";
+}
+
+.news-block
+{
+    float: left;
+    width: 595px;
+    height: 440px;
+}
+
+.says-block
+{
+    height: 570px;
+}
+
+.raw-4__text--large
+{
+    font-size: 28pt;
+    text-align: center;
+    color: #003d48;
+    padding-top: 55px;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+.raw-4__text--small
+{
+    font-size: 20pt;
+    text-align: center;
+    color: #9cd5e6;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    font-weight: lighter;
+    
+}
+
+.raw-4-name__hr
+{
+    border: none;
+    background-color: #dbdbdb;
+    height: 1px;
+    width: 1110px;
+    margin-left: 30px;
+    
+    
+}

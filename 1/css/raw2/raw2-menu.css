@@ -1,0 +1,107 @@
+.raw2-menu
+{
+    float: right;
+    height: 100%;
+    width: 370px;
+    padding: 0;
+    margin-top: 60px;
+    box-sizing: border-box
+}
+
+.raw2-menu .raw2-menu__tabs
+{
+    font-family: "Source Sans Pro";
+}
+
+.raw2-menu .raw2-menu__tab
+{
+    height: 40px;
+    width: 100px;
+    border: solid 1px #ececec;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 10px;
+    font-size: 11pt;
+    font-weight: bold;
+    float: left;
+    color: #787878;
+    margin-right: 10px;
+}
+
+.raw2-menu .raw2-menu__tab > p
+{
+    text-align: center;
+}
+
+.raw2-menu .raw2-menu__tab--active
+{
+    background-color: #003d48;
+    color: #f77462;
+}
+
+.raw2-menu__tabs--text
+{
+    width: 340px;
+    height: 150px;
+    clear: left;
+    background-color: #003d48;
+    border: solid 1px #ececec;
+    color: #fff;
+    border-top-right-radius: 5px;
+    border-top: none;
+    border-bottom: none;
+    padding-left: 25px;
+    font-size: 12pt;
+    line-height: 20px;
+}
+
+.raw2-menu__tabs--text-title
+{
+    color: #6dc5dd;
+    font-size: 14pt;
+    padding-top: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.raw2-menu__bottom-part
+{
+    height: 240px;
+    width: 340px;
+    border: solid 1px #ececec;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.raw2-menu__bottom-part--list
+{
+    padding-left: 30px;
+    padding-top: 20px;
+    list-style: none;  
+    color: #b5b5b5;
+    font-family: "Source Sans Pro";
+    font-size: 12pt;
+
+}
+
+.raw2-menu__bottom-part--list li 
+{
+    margin-bottom: 10px;
+}
+
+.raw2-menu__bottom-part--hr
+{
+    border: none;
+    background-color: #dbdbdb;
+    height: 1px;
+    margin-bottom: 10px;
+    width: 280px;
+
+    
+    
+    
+    
+}

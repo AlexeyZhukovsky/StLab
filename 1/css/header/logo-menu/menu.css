@@ -1,0 +1,41 @@
+.menu 
+{
+	padding-top: 10px;
+	display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.menu li 
+{
+	float: left;
+	display: block;
+	padding-right: 30px;
+    padding-left: 30px;
+    border-right: 1px solid grey;
+	
+}
+.menu li:last-of-type 
+{
+	border-right-width: 0px;
+}
+
+.menu a {
+	color: #787878;
+	text-decoration: none;
+	font-family: "Source Sans Pro";
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.menu a:hover
+{
+	color: #6dc5dd;
+	text-decoration: none;
+}
+
+nav
+{
+    float: right;
+	
+}
