@@ -1,0 +1,86 @@
+.baner
+{
+    background: linear-gradient(to bottom, #e7e7e7, #ffffff);
+    width: 1170px;
+    height: 400px;
+}
+
+.baner__img
+{
+    padding-top: 48px;
+    padding-left: 100px;
+    /*display: -webkit-inline-box;*/
+    float: left;
+    /*border: solid 1px blue;*/
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.baner__text
+{
+    /*display: -webkit-inline-box;*/
+    width: 50%;
+    float: right;
+    clear: right;
+    padding-top: 90px;
+    /*padding-left: 105px;*/
+    /*border: solid 1px blue;*/
+    box-sizing: border-box;
+}
+
+ /*@font-face {
+    font-family: SourceSansPro-Black; 
+    src: url(../SourceSansPro-Black.ttf); 
+   }*/
+
+.baner__text--lager
+{
+    font-size: 32pt;
+    text-transform: uppercase;
+    /*font-family: SourceSansPro-Blacks;*/
+}
+
+.baner__text--midle
+{
+    font-size: 22pt;
+    color: #003d48;
+}
+
+.baner__text--small
+{
+    font-size: 16pt;
+    color: #8b8b8b;
+    margin-top: 25px;
+    margin-bottom: 30px; 
+}
+
+.baner__btn
+{
+    width: 50%;
+    float: right;
+    /*border: solid 1px blue;*/
+    box-sizing: border-box;
+    /*padding-left: 105px;*/
+
+}
+
+.button
+{
+    background: #f77462;
+    color: #fff;
+    border-radius: 3px;
+    display: block;
+    width: 130px;
+    height: 45px;
+    padding: 15px 0;
+    font-family: "SourceSansPro";
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    /*font-weight: bold;*/
+    font-size: 18px;
+    box-sizing: border-box;
+    
+
+}
+

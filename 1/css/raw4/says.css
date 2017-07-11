@@ -1,0 +1,53 @@
+.says-block
+{
+    height: 173px;
+    width: 540px;
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    background-color: #ececec;
+    border-radius: 3px;
+    
+}
+
+.says-block__text
+{
+    margin-left: 30px;
+    float: left;
+}
+
+.says-block__text--message
+{
+    padding-top: 40px;
+    font-size: 13pt;
+    color: #787878;
+}
+
+.says-block__text--signature
+{
+    font-size: 15pt;
+    color: #f77462;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.says-block__img
+{
+    float: right;
+}
+
+.says-block__img--circle
+{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: #fff;
+    margin-right: 30px;
+    margin-top: 30px;
+
+}
+
+.says-block__img--comment
+{
+    padding-top: 23px;
+    padding-left: 13px;
+}

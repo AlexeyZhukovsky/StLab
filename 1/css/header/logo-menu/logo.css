@@ -1,0 +1,38 @@
+/*.clearfix::after
+{
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+}*/
+.logo 
+{
+    /*background-color: red;*/
+    width: 30%;
+    display: -webkit-inline-box;
+    /*margin-top: 27px;*/
+    
+}
+
+/*@font-face { 
+font-family: "Lato-HairlineItalic"; 
+src: url("../fonts/Lato-HairlineItalic.ttf") format("truetype"); 
+font-weight: 400; 
+font-style: normal; 
+} */
+
+/*.logo__p > p
+{
+    font-family: "Lato-HairlineItalic";
+
+}*/
+
+.logo__img
+{
+    display: -webkit-inline-box;
+}
+
+.logo__text
+{
+    padding-left: 15px;
+}

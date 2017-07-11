@@ -1,0 +1,25 @@
+.raw-3
+{
+    height: 205px;
+    background-color: #f77462;
+    align-content: center;
+}
+
+.raw-3__text--large
+{
+    font-size: 32pt;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+.raw-3__text--small
+{
+    font-size: 18pt;
+    font-weight: lighter;
+    text-align: center;
+    color: #fff;
+   
+}
