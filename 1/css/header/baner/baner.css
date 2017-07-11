@@ -1,8 +1,3 @@
- /*@font-face {
-    font-family: "SourceSansPro-Black"; 
-    src: url("SourceSansPro-Black.ttf"); 
-   }*/
-
 .baner
 {
     background: linear-gradient(to bottom, #e7e7e7, #ffffff);
@@ -26,29 +21,28 @@
     float: right;
     clear: right;
     padding-top: 90px;
-    /*padding-left: 105px;*/
-    /*border: solid 1px blue;*/
     box-sizing: border-box;
+    font-family: "Source Sans Pro";
+
 }
-
-
 
 .baner__text--lager
 {
     font-size: 32pt;
     text-transform: uppercase;
-    font-family: "SourceSansPro-Blacks";
+    font-weight: 900;
 }
 
 .baner__text--midle
 {
-    font-size: 22pt;
+    font-size: 20pt;
     color: #003d48;
+    font-weight: 300;
 }
 
 .baner__text--small
 {
-    font-size: 16pt;
+    font-size: 13pt;
     color: #8b8b8b;
     margin-top: 25px;
     margin-bottom: 30px; 
@@ -58,10 +52,7 @@
 {
     width: 50%;
     float: right;
-    /*border: solid 1px blue;*/
     box-sizing: border-box;
-    /*padding-left: 105px;*/
-
 }
 
 .button
@@ -72,15 +63,13 @@
     display: block;
     width: 130px;
     height: 45px;
-    padding: 15px 0;
-    font-family: "SourceSansPro";
+    padding: 10px 0;
+    font-family: "Source Sans Pro";
+    font-weight: 400;
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
-    /*font-weight: bold;*/
-    font-size: 18px;
+    font-size: 20px;
     box-sizing: border-box;
-    
-
 }
 
