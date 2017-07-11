@@ -4,13 +4,12 @@
 }
 .raw-4-name
 {
-    /*border: solid 1px blue;*/
     height: 220px;
+    font-family: "Source Sans Pro";
 }
 
 .news-block
 {
-    /*border: solid 1px blue;*/
     float: left;
     width: 595px;
     height: 440px;
@@ -18,26 +17,27 @@
 
 .says-block
 {
-     /*border: solid 1px blue;*/
-     height: 570px;
+    height: 570px;
 }
 
 .raw-4__text--large
 {
-    font-size: 32pt;
+    font-size: 28pt;
     text-align: center;
     color: #003d48;
     padding-top: 55px;
     padding-bottom: 30px;
+    font-weight: bold;
 }
 
 .raw-4__text--small
 {
-    font-size: 22pt;
+    font-size: 20pt;
     text-align: center;
     color: #9cd5e6;
     margin-top: 10px;
     margin-bottom: 10px; 
+    font-weight: lighter;
     
 }
 
