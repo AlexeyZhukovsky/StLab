@@ -1,3 +1,8 @@
+ /*@font-face {
+    font-family: "SourceSansPro-Black"; 
+    src: url("SourceSansPro-Black.ttf"); 
+   }*/
+
 .baner
 {
     background: linear-gradient(to bottom, #e7e7e7, #ffffff);
@@ -7,18 +12,16 @@
 
 .baner__img
 {
-    padding-top: 48px;
+    margin-top: 52px;
     padding-left: 100px;
-    /*display: -webkit-inline-box;*/
+    height: 348px;
     float: left;
-    /*border: solid 1px blue;*/
     width: 50%;
     box-sizing: border-box;
 }
 
 .baner__text
 {
-    /*display: -webkit-inline-box;*/
     width: 50%;
     float: right;
     clear: right;
@@ -28,16 +31,13 @@
     box-sizing: border-box;
 }
 
- /*@font-face {
-    font-family: SourceSansPro-Black; 
-    src: url(../SourceSansPro-Black.ttf); 
-   }*/
+
 
 .baner__text--lager
 {
     font-size: 32pt;
     text-transform: uppercase;
-    /*font-family: SourceSansPro-Blacks;*/
+    font-family: "SourceSansPro-Blacks";
 }
 
 .baner__text--midle
