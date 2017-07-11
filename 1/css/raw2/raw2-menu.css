@@ -1,0 +1,11 @@
+.raw2-menu
+{
+    /*border: solid 1px green;*/
+    float: right;
+    height: 50%;
+    width: 370px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+    
+}
