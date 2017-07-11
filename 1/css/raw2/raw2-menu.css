@@ -1,11 +1,115 @@
 .raw2-menu
 {
-    /*border: solid 1px green;*/
     float: right;
-    height: 50%;
+    height: 100%;
     width: 370px;
     padding: 0;
-    margin: 0;
+    margin-top: 60px;
     box-sizing: border-box
+}
+
+.raw2-menu__tabs
+{
+    font-family: "Source Sans Pro";
+}
+
+.tab
+{
+    height: 40px;
+    width: 100px;
+    border: solid 1px #ececec;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+.raw2-menu__tabs--active-tab
+{
+    float: left;
+    background-color: #003d48;
+    color: #f77462;
+
+     
+}
+
+.raw2-menu__tabs--inactive-tab
+{
+    float: left;
+    color: #787878;
+    margin-left: 10px;
+    padding-left: 25px;
+}
+
+.raw2-menu__tabs--text
+{
+    width: 340px;
+    height: 150px;
+    clear: left;
+    background-color: #003d48;
+    border: solid 1px #ececec;
+    color: #fff;
+    border-top-right-radius: 5px;
+    border-top: none;
+    border-bottom: none;
+    padding-left: 25px;
+    font-size: 12pt;
+    line-height: 20px;
+}
+
+.raw2-menu__tabs--text-title
+{
+    color: #6dc5dd;
+    font-size: 14pt;
+    padding-top: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.raw2-menu__bottom-part
+{
+    height: 240px;
+    width: 340px;
+    border: solid 1px #ececec;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.raw2-menu__bottom-part--list
+{
+    padding-left: 50px;
+    padding-top: 20px;
+    list-style-image: url("D:/StLab/1/img/marker-arrow.gif");
+    color: #b5b5b5;
+    font-family: "Source Sans Pro";
+    font-size: 12pt;
+
+    
+
+}
+
+.raw2-menu__bottom-part--list li 
+{
+    margin-bottom: 10px;
+    /*margin-left: 0;
+    margin-right: 0;*/
+}
+
+.raw2-menu__bottom-part--hr
+{
+    border: none;
+    background-color: #dbdbdb;
+    height: 1px;
+    margin-bottom: 10px;
+    width: 260px;
+
+    
+    
+    
     
 }
