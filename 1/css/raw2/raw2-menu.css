@@ -90,18 +90,8 @@
 .raw2-menu__bottom-part--list li 
 {
     margin-bottom: 10px;
-}
-
-.raw2-menu__bottom-part--hr
-{
-    border: none;
-    background-color: #dbdbdb;
-    height: 1px;
+    border-bottom: solid 1px #dbdbdb;
+    padding-bottom: 10px;
     margin-bottom: 10px;
-    width: 280px;
-
-    
-    
-    
-    
+    margin-right: 30px;
 }
