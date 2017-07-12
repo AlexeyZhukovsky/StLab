@@ -45,6 +45,8 @@
 
 .news__text
 {
+    float: right;
+    width: 465px; 
     font-family: "Source Sans Pro";
 }
 
