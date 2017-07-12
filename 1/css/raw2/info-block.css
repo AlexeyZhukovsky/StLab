@@ -11,15 +11,12 @@
 
 .info-block__img
 {
-    /*border: solid 1px green;*/
     float: left;
     height: 100%;
     width: 215px;
     box-sizing: border-box;
     margin: 0;
     padding-top: 65px;
-    
-    
 }
 
 .info-block__text
