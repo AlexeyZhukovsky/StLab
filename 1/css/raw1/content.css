@@ -44,7 +44,7 @@
     line-height: 20px; 
 }
 
-.content .content__link
+.content .content__link-contener
 {
     float: right;
     height: 40%;
@@ -84,7 +84,7 @@
     padding-top: 9px;
 }
 
-.link
+.content__link
 {
     font-size: 16px;
     font-family: "SourceSansPro";

@@ -2,10 +2,22 @@
 {
     width: 30%;
     display: -webkit-inline-box;
+    
+}
+
+.logo .logo__text
+{
     font-family: "Lato";
     color: #929292;
     font-size: 12pt;  
 }
+
+.logo .logo__img
+{
+    margin-top: 5px;
+    padding-right: 20px;
+}
+
 
 .logo__text--big-dark-word
 {
@@ -21,8 +33,3 @@
     font-size: 21pt;
 }
 
-.logo__img
-{
-    margin-top: 5px;
-    padding-right: 20px;
-}
