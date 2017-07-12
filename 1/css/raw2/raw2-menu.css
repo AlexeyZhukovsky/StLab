@@ -43,7 +43,7 @@
 .raw2-menu__tabs--text
 {
     width: 340px;
-    height: 150px;
+    min-height: 150px;
     clear: left;
     background-color: #003d48;
     border: solid 1px #ececec;
@@ -52,6 +52,8 @@
     border-top: none;
     border-bottom: none;
     padding-left: 25px;
+    padding-right: 20px;
+    padding-bottom: 30px;
     font-size: 12pt;
     line-height: 20px;
 }
@@ -67,13 +69,12 @@
 
 .raw2-menu__bottom-part
 {
-    height: 240px;
+    min-height: 240px;
     width: 340px;
     border: solid 1px #ececec;
     border-top: none;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
 }
 
 .raw2-menu__bottom-part--list
@@ -84,7 +85,6 @@
     color: #b5b5b5;
     font-family: "Source Sans Pro";
     font-size: 12pt;
-
 }
 
 .raw2-menu__bottom-part--list li 
