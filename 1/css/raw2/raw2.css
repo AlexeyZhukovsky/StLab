@@ -1,6 +1,6 @@
 .raw-2
 {
-    height: 575px;
+    min-height: 575px;
     background-color: #fff;
     box-sizing: border-box;
     padding: 0;

@@ -1,6 +1,6 @@
 .says-block
 {
-    height: 173px;
+    min-height: 173px;
     width: 540px;
     float: right;
     margin-right: 30px;
@@ -13,6 +13,7 @@
 .says-block__text
 {
     margin-left: 30px;
+    width: 370px;
     float: left;
     font-family: "Source Sans Pro";
 }
