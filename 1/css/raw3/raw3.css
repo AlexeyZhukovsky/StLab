@@ -1,6 +1,6 @@
 .raw-3
 {
-    height: 205px;
+    min-height: 205px;
     background-color: #f77462;
     padding-top: 50px;
 }
@@ -20,5 +20,4 @@
     font-size: 25pt;
     font-weight: bold;
     padding-bottom: 10px;
-    margin-left: 350px;
 }
