@@ -1,4 +1,9 @@
-.menu 
+.navigation-menu
+{
+	float: right;
+}
+
+.navigation-menu .navigation-menu__menu-elements 
 {
 	padding-top: 10px;
 	display: block;
@@ -6,7 +11,7 @@
     width: 100%;
 }
 
-.menu li 
+.navigation-menu .navigation-menu__menu-elements li 
 {
 	float: left;
 	display: block;
@@ -15,12 +20,12 @@
     border-right: 1px solid grey;
 	
 }
-.menu li:last-of-type 
+.navigation-menu .navigation-menu__menu-elements li:last-of-type 
 {
 	border-right-width: 0px;
 }
 
-.menu a {
+.navigation-menu .navigation-menu__menu-elements a {
 	color: #787878;
 	text-decoration: none;
 	font-family: "Source Sans Pro";
@@ -28,14 +33,9 @@
 	font-weight: bold;
 }
 
-.menu a:hover
+.navigation-menu .navigation-menu__menu-elements a:hover
 {
 	color: #6dc5dd;
 	text-decoration: none;
 }
 
-nav
-{
-    float: right;
-	
-}
