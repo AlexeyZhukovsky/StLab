@@ -1,7 +1,6 @@
 .logo-menu
 {
-    height: 100px;
-    padding-top: 25px;
-    padding-left: 30px;
+    min-height: 100px;
+    padding: 25px 30px;
     background-color: #fff;
 }
