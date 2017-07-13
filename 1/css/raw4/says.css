@@ -9,7 +9,7 @@
     
 }
 
-.says-block__text
+.says-block-wrapper
 {
     margin-left: 30px;
     width: 370px;
@@ -17,14 +17,14 @@
     font-family: "Source Sans Pro";
 }
 
-.says-block__text--message
+.says-block-wrapper__message
 {
     padding-top: 40px;
     font-size: 16px;
     color: #787878;
 }
 
-.says-block__text--signature
+.says-block-wrapper__signature
 {
     font-size: 21px;
     color: #f77462;
@@ -37,7 +37,7 @@
     float: right;
 }
 
-.says-block__img--circle
+.says-block__img-circle
 {
     height: 100px;
     width: 100px;
@@ -48,7 +48,7 @@
 
 }
 
-.says-block__img--comment
+.says-block__picture
 {
     padding-top: 23px;
     padding-left: 13px;
