@@ -1,39 +1,27 @@
-.navigation-menu
+ .navigation-menu
 {
 	float: right;
-}
-
-.navigation-menu .navigation-menu__menu-elements 
-{
 	padding-top: 10px;
-	display: block;
-    height: 100%;
-    width: 100%;
 }
 
-.navigation-menu .navigation-menu__menu-elements li 
+.navigation-menu__menu-elements
 {
-	float: left;
-	display: block;
-	padding-right: 30px;
-    padding-left: 30px;
-    border-right: 1px solid grey;
-	
-}
-.navigation-menu .navigation-menu__menu-elements li:last-of-type 
-{
-	border-right-width: 0px;
-}
-
-.navigation-menu .navigation-menu__menu-elements a {
 	color: #787878;
 	text-decoration: none;
 	font-family: "Source Sans Pro";
 	font-size: 18px;
 	font-weight: bold;
+	padding: 0 30px;
+   	border-right: 1px solid #e7e7e7;
 }
 
-.navigation-menu .navigation-menu__menu-elements a:hover
+.navigation-menu :last-child
+{
+	border-right-width: 0px;
+	padding-right: 0;
+}
+
+.navigation-menu a:hover
 {
 	color: #6dc5dd;
 	text-decoration: none;
