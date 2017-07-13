@@ -31,14 +31,14 @@
 
 .news__icon--text-large
 {
-    font-size: 25pt;
+    font-size: 32px;
     text-align: center;
     color: #fff;
 }
 
 .news__icon--text-small
 {
-    font-size: 13pt;
+    font-size: 17px;
     text-align: center;
     color: #fff;
 }
@@ -52,7 +52,7 @@
 
 .news__text--title
 {
-    font-size: 16pt;
+    font-size: 22px;
     font-weight: bold;
     color: #003d48;
 }
@@ -61,12 +61,12 @@
 {
     text-decoration: none;
     color: #f77462;
-    font-size: 14pt;
+    font-size: 19px;
 }
 
 .news__text--description
 {
-    font-size: 12pt;
+    font-size: 16px;
     color: #787878;
     margin-top: 7px;
     padding-right: 30px; 

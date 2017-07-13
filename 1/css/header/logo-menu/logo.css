@@ -9,7 +9,7 @@
 {
     font-family: "Lato";
     color: #929292;
-    font-size: 12pt;  
+    font-size: 16px;  
 }
 
 .logo .logo__img
@@ -23,13 +23,13 @@
 {
     font-weight: bolder;
     color: #003d48;
-    font-size: 21pt;
+    font-size: 29px;
 }
 
 .logo__text--big-red-word
 {
     font-weight: lighter;
     color: #f9968a;
-    font-size: 21pt;
+    font-size: 29px;
 }
 
