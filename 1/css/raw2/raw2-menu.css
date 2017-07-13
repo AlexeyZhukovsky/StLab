@@ -40,7 +40,7 @@
     color: #f77462;
 }
 
-.raw2-menu__tabs--text
+.raw2-menu__tabs-text-wrapper
 {
     width: 340px;
     min-height: 150px;
@@ -58,7 +58,7 @@
     line-height: 20px;
 }
 
-.raw2-menu__tabs--text-title
+.raw2-menu__text-title
 {
     color: #6dc5dd;
     font-size: 19px;
@@ -67,7 +67,7 @@
     margin-bottom: 10px;
 }
 
-.raw2-menu__bottom-part
+.raw2-menu__list-wrapper
 {
     min-height: 240px;
     width: 340px;
@@ -77,7 +77,7 @@
     border-bottom-right-radius: 5px;
 }
 
-.raw2-menu__bottom-part--list
+.raw2-menu-list
 {
     padding-left: 30px;
     padding-top: 20px;
@@ -87,7 +87,7 @@
     font-size: 16px;
 }
 
-.raw2-menu__bottom-part--list li 
+.raw2-menu-list li 
 {
     margin-bottom: 10px;
     border-bottom: solid 1px #dbdbdb;
