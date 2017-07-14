@@ -2,7 +2,17 @@
 {
     min-height: 575px;
     background-color: #fff;
-    box-sizing: border-box;
-    padding: 0;
-    padding-left: 30px;
+    padding: 0 30px;
+}
+
+.raw-2__info-blocks
+{
+    float: left;
+    padding-top: 60px;
+}
+
+.raw-2__menu
+{
+    float: left;
+    padding-top: 60px;
 }

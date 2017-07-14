@@ -1,6 +1,6 @@
 .container
 {
-    width: 1170px;
+    max-width: 1170px;
     margin: auto;
 }
 
@@ -23,4 +23,16 @@ body
 	display: table;
 	width: 100%;
     clear: both;
+}
+
+/* @media screen and (min-width: 1024px){
+    body{
+        display: none;
+    }
+} */
+
+@media screen and (min-width: 412px){
+    /* body{
+        display: none;
+    } */
 }
