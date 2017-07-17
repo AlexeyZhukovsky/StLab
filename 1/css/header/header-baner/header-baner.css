@@ -19,24 +19,27 @@
     float: left;
 }
 
-
 .header-baner__content
 {
     float: left;
     min-width: 50%;
 }
 
+.baner-content__text
+{
+    padding-top: 115px;
+}
+
 .baner-text
 {
     min-width: 50%;
-    padding-top: 115px;
     font-family: "Source Sans Pro";
     font-size: 17px;
     color: #8b8b8b;
     margin-bottom: 30px; 
 }
 
-.baner-text--lager
+.baner-text__lager
 {
     color: #003d48;
     font-size: 42px;
@@ -45,10 +48,11 @@
     float: none;
     padding: 0;
     display: block;
+    margin-bottom: 30px; 
     
 }
 
-.baner-text--midle
+.baner-text__midle
 {
     font-size: 26px;
     color: #003d48;
@@ -58,10 +62,10 @@
     margin: 0;
 }
 
-.baner__btn
+.baner-content__btn
 {
-   padding-bottom: 70px;
-}  
+    padding-bottom: 70px;
+}
 
 .button
 {
