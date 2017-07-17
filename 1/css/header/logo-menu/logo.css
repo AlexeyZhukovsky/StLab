@@ -1,31 +1,42 @@
 .logo 
 {
-    width: 30%;
-    display: -webkit-inline-box;
     height: 50px;
+}  
+
+.logo__img
+{
+    float: left;
+    height: 100%;
+    margin-right: 20px;
 }
 
 .logo__text
 {
+    float: left;
+    max-width: 150px;
+}
+
+.site-name
+{
     font-family: "Lato";
     color: #929292;
     font-size: 16px;
-    padding-left: 20px;  
+    
 }
 
-.logo__text--big-dark-word
+.site-name__big-dark-word
 {
     font-weight: bolder;
     color: #003d48;
     font-size: 28px;
-    padding-left: 0;
+   
 }
 
-.logo__text--big-red-word
+.site-name__big-red-word
 {
     font-weight: lighter;
     color: #f9968a;
     font-size: 28px;
-    padding-left: 0;
+    
 }
 
