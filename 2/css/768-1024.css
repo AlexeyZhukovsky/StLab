@@ -1,0 +1,13 @@
+@media screen and (max-width: 768px) { 
+/*.raw-1__item { 
+width: 48%; 
+} */
+
+
+.navigation-menu
+{
+    float: left;
+    width: 150px;
+}
+
+} 
