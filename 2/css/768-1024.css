@@ -1,13 +1,19 @@
-@media screen and (max-width: 768px) { 
-/*.raw-1__item { 
-width: 48%; 
-} */
+@media screen and (min-width: 768px) and (max-width: 1024px) 
 
+{ 
+.raw-1__item { 
+width: 48%; 
+} 
 
 .navigation-menu
 {
     float: left;
-    width: 150px;
+    width: 70%;
+}
+
+.navigation-menu__menu-elements
+{
+    padding: 0 3%;
 }
 
 } 
