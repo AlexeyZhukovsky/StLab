@@ -1,0 +1,98 @@
+.header-baner
+{
+    background: linear-gradient(to bottom, #e7e7e7, #ffffff);
+    width: 100%;
+    min-height: 400px;
+    padding: 0 30px;
+}
+
+.header-baner__img
+{
+    float: left;
+}
+
+.baner-img
+{
+    margin: 52px 0 0 70px;
+    padding-right: 100px;
+    max-width: 100%;
+    float: left;
+}
+
+.header-baner__content
+{
+    float: left;
+    min-width: 50%;
+}
+
+.baner-content__text
+{
+    padding-top: 115px;
+}
+
+.baner-text
+{
+    min-width: 50%;
+    font-family: "Source Sans Pro";
+    font-size: 17px;
+    color: #8b8b8b;
+    margin-bottom: 30px; 
+}
+
+.baner-text__lager
+{
+    color: #003d48;
+    font-size: 42px;
+    text-transform: uppercase;
+    font-weight: 900;
+    float: none;
+    padding: 0;
+    display: block;
+    margin-bottom: 30px; 
+    
+}
+
+.baner-text__midle
+{
+    font-size: 26px;
+    color: #003d48;
+    font-weight: lighter;
+    float: none;
+    padding: 0; 
+    margin: 0;
+}
+
+.baner-content__btn
+{
+    padding-bottom: 70px;
+}
+
+.button
+{
+    float: left; 
+    background: #f77462;
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+           
+}
+
+.button__text
+{
+    color: #fff;
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+ .button__text--header-btn
+{
+    width: 130px;
+    padding: 10px 30px;
+    font-size: 20px;
+    
+} 
+
+

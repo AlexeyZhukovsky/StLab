@@ -1,0 +1,89 @@
+.content
+{
+    height: 100%;
+    /*display: flex;*/
+    /* width: 31%; */
+    float: left;
+    /*margin-right: 25px;*/
+}
+
+.content__img
+{
+    float: left;
+    margin-right: 25px;
+    height: 150px;
+}
+
+.content__img-circle
+{
+    background-color: #fff;
+    border-radius: 50px;
+    width: 65px;
+    height: 65px;
+}
+
+.content__picture
+{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.content__picture--camera
+{
+    padding-left: 11px;
+    padding-top: 15px;
+}
+
+.content__picture--home
+{
+    padding-left: 12px;
+    padding-top: 9px;
+}
+
+.content__text
+{
+    max-width: 220px;
+    float: left;
+}
+
+.content-text-block
+{
+    width: 260px;
+    font-family: "Source Sans Pro";
+    color: #fff;
+    font-size: 10pt;  
+    line-height: 20px; 
+    padding: 0;
+    float: none;
+    width: 100%;
+    
+}
+ 
+.content-text-block__title
+{
+    display: block;
+    font-size: 14pt;
+    font-weight: bold;
+    float: none;
+    width: 100%;
+    padding-bottom: 20px; 
+}  
+
+.content__link-contener
+{
+    /*float: right;*/
+    /* height: 40%; */
+    width: 260px;
+    padding-top: 20px;
+    
+    
+}
+
+.content__link
+{
+    font-size: 16px;
+    font-family: "SourceSansPro";
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
