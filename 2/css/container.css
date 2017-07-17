@@ -1,0 +1,32 @@
+.container
+{
+    max-width: 1170px;
+    margin: auto;
+}
+
+body
+{
+    background-image: url("../img/background.gif");
+    width: 100%;
+    margin: auto;
+    
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+	content:'';
+	display: table;
+	width: 100%;
+    clear: both;
+}
+
+
+
+
+

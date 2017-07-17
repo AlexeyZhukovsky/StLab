@@ -1,0 +1,23 @@
+.raw-3
+{
+    min-height: 205px;
+    background-color: #f77462;
+    padding-top: 50px;
+}
+
+.raw-3__text
+{
+    font-size: 22px;
+    font-family: "Source Sans Pro";
+    font-weight: lighter;
+    text-align: center;
+    line-height:  30px;
+    color: #fff;
+}
+
+.raw-3__text--large
+{
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
