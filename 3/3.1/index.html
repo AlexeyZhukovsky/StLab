@@ -5,9 +5,24 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
-        <script src="test.js"></script>
+        
     </head>
     <body>
-    
+        <input type="text" name="unformatDate" id="unformatDate" value="12481498">
+        <select name="changeFormat" id="formatType">
+            <option value="1">MMDDYYYY</option>
+            <option value="2">DDMMYYYY</option>
+            <option value="3">YYYYDDMM</option>
+            <option value="4">YYYYMMDD</option>
+        </select>
+        <select name="formatMonth" id="formatMonth">
+            <option value="1">**.**.****</option>
+            <option value="2">**.month.****</option>
+        </select>
+
+        <input type="button" name="tofomat" value="FORMAT" id="btn">
+
+        <script src="FormatDate.js"></script>
     </body>
+    
 </html>
