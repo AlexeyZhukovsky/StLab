@@ -72,7 +72,7 @@ var NewDate = {};
                         }
                     else if (formatType == 3)
                         {
-                            dateArray[3] = month[dateArray[3]-1];
+                            dateArray[1] = month[dateArray[2]-1];
                         }
                     else if (formatType == 4)
                         {
