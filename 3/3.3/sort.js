@@ -1,52 +1,16 @@
-var ArraySorter = function () {
+var ArraySorter = function()
+{
     var self = this;
 
-    var localVariable = 5;
-
-    self.bubbleSort = function () {
-
-    };
+var parseArray = function(str){
+    this.str = str;
+    var arrayOfStr = str.split(/\s/);
+    var arrayOfNumber = arrayOfStr.map(parseFloat); 
+    return arrayOfNumber; 
 };
 
-var arraySorter = new ArraySorter();
-arraySorter.bubbleSort();
-
-
-
-
-
-
-(function() {
-    var arraySorter = new ArraySorter();
-
-    document.getElementById("btn").onclick = function () {
-        // arraySorter.bubbleSort();
-        console.log(sortedArray);
-    }
-})();
-
-
-
-
-
-
-var sorting =  sorting || {};
-
-
-parseArray = function(str){
-    var originString = str;
-    var arrStr = originString.split(/\s/);
-    var arrNumber = arrStr.map(parseFloat); 
-    return arrNumber; 
-};
-
-var originStringArray = document.getElementById("originArray").value;
-var unsortedArray = parseArray(originStringArray);
-var sortedArray;
-
-sorting.bubble = function(array)
-{      
-    // console.log(array);
+var bubble = function(array)
+    {      
     var n = array.length;
     for (var i = 0; i < n-1; i++)
     {
@@ -60,12 +24,12 @@ sorting.bubble = function(array)
             }
         }
     }
-    // console.log(array);
+    console.log("bubble sort")
     return array;
-};
+    };
 
-sorting.quick = function(array)
-{
+var quick = function(array)
+    {
     if (array.length == 0) return [];
     var a = [];
     var b = [];
@@ -81,11 +45,12 @@ sorting.quick = function(array)
             b[b.length] = array[ i ];
         }
     }
-    return sorting.quick(a).concat( p, sorting.quick(b) );
-};
+    console.log("quick sort")
+    return quick(a).concat( p, quick(b));
+    };
 
-sorting.shell = function(array)
-{
+var shell = function(array)
+    {
     var n = array.length, i = Math.floor(n/2);
     while (i > 0)
     { 
@@ -101,11 +66,12 @@ sorting.shell = function(array)
         }
         i = (i==2) ? 1 : Math.floor(i*5/11);
     }
+    console.log("shell sort")
     return array;
-};
+    };
 
-sorting.counting = function(array)
-{   
+var counting = function(array)
+    {   
     var n = array.length;
     var count = [];
     var supportArray = [];
@@ -130,25 +96,33 @@ sorting.counting = function(array)
     for (var i = 0; i < n; i++)
     {
         supportArray[count[ i ]] = array[ i ];
-    }    
+    }
+    console.log("counting sort")    
     return supportArray;
-};
+    };
+  
 
-var sortMe
-thod = document.getElementById("sortMethod").value;
-    if (sortMethod == 1)
+    self.bableSort = function(string)
     {
-        sortedArray = sorting.bubble(unsortedArray);
+        var sortedArr = bubble(parseArray(string));
+        return sortedArr;
     }
-    else if (sortMethod == 2)
+
+    self.quickSort = function(string)
     {
-        sortedArray = sorting.quick(unsortedArray);
+        var sortedArr = quick(parseArray(string));
+        return sortedArr;
     }
-    else if (sortMethod == 3)
+
+    self.shellSort = function(string)
     {
-        sortedArray = sorting.shell(unsortedArray);
+        var sortedArr = shell(parseArray(string));
+        return sortedArr;
     }
-    else if (sortMethod == 4)
+
+    self.countingSort = function(string)
     {
-        sortedArray = sorting.counting(unsortedArray);
+        var sortedArr = counting(parseArray(string));
+        return sortedArr;
     }
+}
