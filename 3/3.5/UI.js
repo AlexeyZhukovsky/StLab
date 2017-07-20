@@ -12,7 +12,7 @@
         }
         else if (searchMethod == 2)
         {
-            
+            var result = maxSum.fastMethod(originStringArray);
         }
            
         
