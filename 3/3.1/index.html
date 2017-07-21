@@ -4,25 +4,15 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-        
     </head>
     <body>
-        <input type="text" name="unformatDate" id="unformatDate" value="12481498">
-        <select name="changeFormat" id="formatType">
-            <option value="1">MMDDYYYY</option>
-            <option value="2">DDMMYYYY</option>
-            <option value="3">YYYYMMDD</option>
-            <option value="4">YYYYDDMM</option>
-        </select>
-        <select name="formatMonth" id="formatMonth">
-            <option value="1">**.**.****</option>
-            <option value="2">**.month.****</option>
-        </select>
+        <input type="text" name="unformatDate" id="unformatDate" value="10071979">
+        <input type="text" name="inputFormat" id="inputFormat" value="YYYY/MM/DD">
+        <input type="text" name="outputFormat" id="outputFormat" value="MM-DD-YYYY">
 
         <input type="button" name="tofomat" value="FORMAT" id="btn">
-
+        <input type="checkbox" id="monthToName">
         <script src="FormatDate.js"></script>
+        <script src="UI.js"></script>
     </body>
-    
 </html>
