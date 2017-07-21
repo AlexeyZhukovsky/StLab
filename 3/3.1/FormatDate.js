@@ -1,109 +1,110 @@
+var DTF = function() {
+  var self = this;
 
+  const DAY_POSITION = 0;
+  const MONTH_POSITION = 2;
+  const YEAR_POSITION = 4;
 
-var NewDate = {};
-    
+  const DAY_LENGTH = 2;
+  const MONTH_LENGTH = 2;
+  const YEAR_LENGTH = 4;
 
-        // this.date = date;
-        // this.regx = regx;
-        // this.convert = function () {
-        //     debugger;
-        //     var output = self.date.match(self.regx);
-        //     var a = output.pop()
-        //     output[output.length-1] += a;
-        //     var b = output.join("-")
-        //     console.log(b)
+  const SPLITTER = ' '
+  const DAY = 'D'
+  const MONTH = 'M'
+  const YEAR = 'Y'
 
-        
-    // function someFunc(){
-    
-    // alert(strok);
-    // }
-    var month=
-    [
-        'January',
-        'February',		
-        'March',		
-        'April',		 
-        'May',
-        'June',		
-        'July',	
-        'August',	
-        'September',		
-        'October',		
-        'November',		
-        'December'
-    ]
-      
+  const MONTH_NAMES = 
+  {
+    '01': 'January',
+    '02': 'February',
+    '03': 'March',
+    '04': 'April',
+    '05': 'May',
+    '06': 'June',
+    '07': 'July',
+    '08': 'August',
+    '09': 'September',
+    '10': 'October',
+    '11': 'November',
+    '12': 'Decenber'
+};
 
-        NewDate.parse = function() {
-            var str = document.getElementById("unformatDate").value;
-            // var self = this;
-            // self.str = strok;
-            var regPattern = /\d{2}/g;
-            var dateArray = str.match(regPattern);
-            
-            var formatType = document.getElementById("formatType").value;
-            if (formatType ==  1 || formatType ==  2) 
-                {
-                    var yearPart = dateArray.pop();
-                    dateArray[2] += yearPart;
-                }
-            else if (formatType == 3 || formatType ==  4)
-                {
-                    var yearPart = dateArray[1];
-                    dateArray.splice(1,1);
-                    dateArray[0] += yearPart;
-                };
+  var Date = function(date, monthToName) {
+    var that = this;
+    that.year = '';
+    that.month = '';
+    that.day = '';
+    that.date = date;
+    that.yearPosition = 4;
+    that.monthPosition = 2;
+    that.dayPosition = 0;
+    that.splitter = ' ';
+    that.monthToName = monthToName;
 
-            var formatMonth = document.getElementById("formatMonth").value; 
-            // if  (formatMonth == 1)
-            //     {
-            //         var formatResult = dateArray.join("-");
-            //     }  
-            if (formatMonth == 2)
-                {
-                    if (formatType == 1)
-                        {
-                            dateArray[0] = month[dateArray[0]-1];
-                        }
-                    else if (formatType == 2)
-                        {
-                            dateArray[1] = month[dateArray[1]-1];
-                        }
-                    else if (formatType == 3)
-                        {
-                            dateArray[1] = month[dateArray[2]-1];
-                        }
-                    else if (formatType == 4)
-                        {
-                            dateArray[2] = month[dateArray[2]-1];
-                        }              
-                    
-                    var formatResult = dateArray;
-                }; 
+    that.format = function (format = '') {
+      if (that.date != '' && format != ''){
+        that.getSplitter(format);
+        that.getPositions(format);
+        that.buildDate(false);
+      }
+      return that;
+    }
 
-            var formatResult = dateArray.join("-");
-            console.log(formatResult);
-            console.log(formatType);
-        };
+    that.getSplitter = function(format) {
+      that.splitter = format.match(/\W/) || SPLITTER
+      return that;
+    }
 
-         document.getElementById("btn").onclick = NewDate.parse;
-        
-        
+    that.getPositions = function(format) {
+      format = format.replace(/\W/g, "")
+      that.dayPosition = format.indexOf(DAY);
+      that.monthPosition = format.indexOf(MONTH);
+      that.yearPosition = format.indexOf(YEAR);
+      return that;
+    }
 
-    //     var bf = function () {
+    that.splitDate = function(date) {
+      that.day = date.substring(that.dayPosition, that.dayPosition + DAY_LENGTH);
+      that.month = date.substring(that.monthPosition, that.monthPosition + MONTH_LENGTH);
+      that.year = date.substring(that.yearPosition, that.yearPosition + YEAR_LENGTH);
+      return that;
+    }
 
-    //     };
+    that.buildDate = function() {
+      month = monthToName ? MONTH_NAMES[that.month] : that.month
+      if (that.yearPosition != 0) {
+        if (that.monthPosition != 0) {
+          that.date = that.day + that.splitter + month + that.splitter + that.year;
+        }
+        else {
+          that.date = month + that.splitter + that.day + that.splitter + that.year;
+        }
+      }
+      else {
+        if (that.monthPosition != YEAR_POSITION) {
+          that.date = that.year + that.splitter + that.day + that.splitter + month;
+        }
+        else {
+          that.date = that.year + that.splitter + month + that.splitter + that.day;
+        }
+      }
+      return that;
+    }
+  }
 
-    //     self.f = function () {
-
-    //     };
-
-    //     return {
-    //         bf: bf
-    //     };
-    // }
-    // var date = new NewDate("31022013",/\d{2}/g);
-    // var convert = date.convert;
-    // convert();
-    // //date.convert();
+  self.parse = function(date, format = '', monthToName) {
+    _date = new Date(date, monthToName);
+    if (_date.date && format == '') {
+      _date.splitDate(date);
+      _date.buildDate();
+    }
+    else if (date && format != '') {
+      _date.getSplitter(format);
+      _date.getPositions(format);
+      _date.splitDate(date);
+      _date.buildDate();
+    }
+    return _date;
+  }
+}
