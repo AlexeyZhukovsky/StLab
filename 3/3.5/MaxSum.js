@@ -4,10 +4,10 @@ var MaxSum = function(){
     var parseArray = function(str){
         this.str = str;
         var arrayOfStr = str.split(/\s/);
-        var arrayOfNumber = arrayOfStr.map(parseFloat); 
-        return arrayOfNumber; 
+        var arrayOfNumber = arrayOfStr.map(parseFloat);
+        return arrayOfNumber;
     };
-    
+
     slow = function(arr){
         var maxValue = 0;
         for(var i = 0; i < arr.length; i++){
@@ -18,7 +18,7 @@ var MaxSum = function(){
             }
         }
         return maxValue;
-    }
+    };
 
     fast = function(arr){
         var maxValue = 0;
@@ -29,17 +29,17 @@ var MaxSum = function(){
             if(posSum < 0){posSum=0}
         }
         return maxValue;
-    }
+    };
 
     self.slowMethod = function(str){
        var result = slow(parseArray(str));
        return result;
 
-    }
+    };
 
     self.fastMethod = function(str){
         var result = fast(parseArray(str));
         return result;
-    }
+    };
 
 }

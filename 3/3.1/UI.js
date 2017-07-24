@@ -4,11 +4,22 @@
       var inputDate = document.getElementById('unformatDate').value;
       var inputFormat = document.getElementById('inputFormat').value;
       var outputFormat = document.getElementById('outputFormat').value;
-      var monthToName = document.getElementById('monthToName');
+      var fromNow = document.getElementById('fromNow');
+      var monthToName = document.getElementById('monthToName').checked;
+      var ticks = document.getElementById('ticks').checked;
+
       var dtf = new DTF();
-      var date = dtf.parse(inputDate, inputFormat, monthToName);
+      var date;
+
+      if (ticks){
+        date = dtf.at(inputDate, monthToName).format(outputFormat);
+      }
+      else{
+        date = dtf.parse(inputDate, inputFormat, monthToName).format(outputFormat);
+      }
+
       console.log(date.date);
-      console.log(date.format(outputFormat).date);
+      console.log("fromNow" + " " + date.fromNow());
     }
 
     document.getElementById("btn").onclick = click;
