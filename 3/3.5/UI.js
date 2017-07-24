@@ -1,7 +1,7 @@
 (function(){
 
     var click = function(){
-        
+
         var originStringArray = document.getElementById("originArray").value;
         var searchMethod = document.getElementById("searchMethod").value;
         var maxSum = new MaxSum();
@@ -14,8 +14,8 @@
         {
             var result = maxSum.fastMethod(originStringArray);
         }
-           
-        
+
+
         console.log(result, searchMethod);
 
     }
