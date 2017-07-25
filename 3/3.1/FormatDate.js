@@ -1,5 +1,9 @@
 var DTF = function() {
+
+  "use strict";
+
   var self = this;
+  var _date;
 
   const DAY_POSITION = 0;
   const MONTH_POSITION = 2;
@@ -62,19 +66,24 @@ var DTF = function() {
 
     that.format = function (format = '') {
       if (that.date != '' && format != '') {
-        that.getSplitter(format);
-        that.getPositions(format);
-        that.buildDate();
+        that.doGetSplitter(format);
+        that.doGetPositions(format);
+        that.doBuildDate();
       }
       return that;
     };
 
-    that.getSplitter = function(format) {
+    var getSplitter = function(format) {
       that.splitter = format.match(/\W/) || SPLITTER
       return that;
     };
 
-    that.getPositions = function(format) {
+    that.doGetSplitter = function(format){
+      var result = getSplitter(format);
+      return result;
+    }
+
+    var getPositions = function(format) {
       format = format.replace(/\W/g, "")
       that.dayPosition = format.indexOf(DAY);
       that.monthPosition = format.indexOf(MONTH);
@@ -82,15 +91,25 @@ var DTF = function() {
       return that;
     };
 
-    that.splitDate = function(date) {
+    that.doGetPositions = function(format){
+      var result = getPositions(format);
+      return result;
+    }
+
+    var splitDate = function(date) {
       that.day = date.substring(that.dayPosition, that.dayPosition + DAY_LENGTH);
       that.month = date.substring(that.monthPosition, that.monthPosition + MONTH_LENGTH);
       that.year = date.substring(that.yearPosition, that.yearPosition + YEAR_LENGTH);
       return that;
     };
 
-    that.buildDate = function() {
-      month = monthToName ? MONTH_NAMES[that.month] : that.month
+    that.doSplitDate = function(data){
+      var result = splitDate(data);
+      return result;
+    }
+
+    var buildDate = function() {
+      var month = monthToName ? MONTH_NAMES[that.month] : that.month
       if (that.yearPosition != 0) {
         if (that.monthPosition != 0) {
           that.date = that.day + that.splitter + month + that.splitter + that.year;
@@ -110,12 +129,17 @@ var DTF = function() {
       return that;
     };
 
-    that.fromNow = function() {
-      dateNow = self.at(Date.now())
+    that.doBuildDate = function(){
+      var result = buildDate();
+      return result;
+    }
 
-      years = parseInt(dateNow.year) - parseInt(that.year);
-      months = parseInt(dateNow.month) - parseInt(that.month);
-      days = parseInt(dateNow.day) - parseInt(that.day);
+    that.fromNow = function() {
+      var dateNow = self.at(Date.now())
+
+      var years = parseInt(dateNow.year) - parseInt(that.year);
+      var months = parseInt(dateNow.month) - parseInt(that.month);
+      var days = parseInt(dateNow.day) - parseInt(that.day);
 
       if (years != 0) {
         return years + ' ' + 'years ago';
@@ -132,14 +156,14 @@ var DTF = function() {
   self.parse = function(date, format = '', monthToName) {
     _date = new DateConverter(date, monthToName);
     if (_date.date && format == '') {
-      _date.splitDate(date);
-      _date.buildDate();
+      _date.doSplitDate(date);
+      _date.doBuildDate();
     }
     else if (date && format != '') {
-      _date.getSplitter(format);
-      _date.getPositions(format);
-      _date.splitDate(date);
-      _date.buildDate();
+      _date.doGetSplitter(format);
+      _date.doGetPositions(format);
+      _date.doSplitDate(date);
+      _date.doBuildDate();
     }
 
     return _date;
@@ -152,14 +176,14 @@ var DTF = function() {
       return value.length == 1 ? ('0' + value) : value;
     }
 
-    timestamp = parseInt(timestampInMs / 1000);
-    second = parseInt(timestamp % SECONDS_IN_MINUTE);
+    var timestamp = parseInt(timestampInMs / 1000);
+    var second = parseInt(timestamp % SECONDS_IN_MINUTE);
     timestamp = parseInt(timestamp / SECONDS_IN_MINUTE);
-    minute = parseInt(timestamp % MINUTES_IN_HOUR);
+    var minute = parseInt(timestamp % MINUTES_IN_HOUR);
     timestamp = parseInt(timestamp / MINUTES_IN_HOUR);
-    hour = parseInt(timestamp % HOURS_IN_DAY);
+    var hour = parseInt(timestamp % HOURS_IN_DAY);
     timestamp = parseInt(timestamp / HOURS_IN_DAY);
-    years = parseInt(timestamp / (DAYS_IN_4_YEARS)) * 4;
+    var years = parseInt(timestamp / (DAYS_IN_4_YEARS)) * 4;
     timestamp = parseInt(timestamp % (DAYS_IN_4_YEARS));
 
 
@@ -179,7 +203,7 @@ var DTF = function() {
     _date.year = (TIMESTAMP_YEAR + years + year).toString();
     _date.month = addZeroToString((TIMESTAMP_MONTH + month).toString());
     _date.day = addZeroToString((TIMESTAMP_DAY + timestamp - DAYS[year][month]).toString());
-    _date.buildDate();
+    _date.doBuildDate();
     return _date;
   };
 };

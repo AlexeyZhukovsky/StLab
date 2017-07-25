@@ -1,16 +1,14 @@
 (function(){
 
-    
+    var calc = new Calc();
 
-    var click = function(){
+    var clickHendler = function(){
 
-        var calc = new Calc();
         var mathExp = document.getElementById("mathExp").value;
         var result = calc.calculate(mathExp);
         console.log(mathExp + " = " + result);
-
     }
 
-    document.getElementById("btn").onclick = click;
+    document.getElementById("btn").onclick = clickHendler;
 
 })();

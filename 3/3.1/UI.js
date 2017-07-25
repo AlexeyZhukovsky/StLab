@@ -1,14 +1,15 @@
 (function(){
 
-    var click = function(){
+    var dtf = new DTF();
+
+    var clickHendler = function(){
       var inputDate = document.getElementById('unformatDate').value;
       var inputFormat = document.getElementById('inputFormat').value;
       var outputFormat = document.getElementById('outputFormat').value;
       var fromNow = document.getElementById('fromNow');
       var monthToName = document.getElementById('monthToName').checked;
       var ticks = document.getElementById('ticks').checked;
-
-      var dtf = new DTF();
+      
       var date;
 
       if (ticks){
@@ -22,6 +23,6 @@
       console.log("fromNow" + " " + date.fromNow());
     }
 
-    document.getElementById("btn").onclick = click;
+    document.getElementById("btn").onclick = clickHendler;
 
 })();
