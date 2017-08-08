@@ -12,10 +12,10 @@ function handleImage(e) {
 
 function emul(request){
     console.log("loading...");
-    if ( $("#login")[0].value == ""){
+    if ( !$("#login").val()){
         return alert("заполните поле login")
     }
-    else if ( $("#password")[0].value == ""){
+    else if ( !$("#password").val){
         return alert("заполните поле password")
     }
     let promise = new Promise(function(resolve,reject){
