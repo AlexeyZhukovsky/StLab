@@ -9,22 +9,19 @@
         <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
         <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
         
-
     </head>
     <body>
 
         <div class="fon" id="popup"> 
             <div class="regForm__confirmation">
                 Registration successful!
-                <input type="button" onclick="PopUpHide()" value="Ok"> 
-            </div>
-             
+                <input type="button" id="closeBtn" value="Ok"> 
+            </div>    
         </div>
-        <div  class="regForm">
-            
+        <div  class="regForm">  
             <p>
                 <label class="regForm__label" for="login">Login</label>
-                <input type="test" id="login" class="regForm__login" name="login" required> 
+                <input type="text" id="login" class="regForm__login" name="login" required> 
             </p>
             <p>
                 <label class="regForm__label" for="password">Password</label>
@@ -32,14 +29,14 @@
             </p>
             <div class="regForm__uploader" >
                 Drop your foto here
-                <img src=""/>
+                <img src=" "/>
                 <input type="file" name="photo"  id="filePhoto" />
             </div>
-             <input type="button" class="regForm__regBtn" value="Register" onclick="emul('1')">  
+             <input type="button" class="regForm__regBtn" value="Register">  
         </div>
-
-          
         
+        <script src="EmulRequest.js"></script>
+        <script src="ImageLoader.js"></script>
         <script src="app.js"></script>
     </body>
 </html> 
