@@ -1,3 +1,7 @@
+import React from 'react';
+import axios from 'axios';
+
+
 const BLOCK_SIZE = 5;
 const IMAGE_SIZE = 600;
 const INITIAL_IMAGE_COUNT = 10;
@@ -10,7 +14,7 @@ class UserList extends React.Component {
   }
 
   componentDidMount() {
-    this.UserList();
+    this.userList();
     window.addEventListener('scroll', this.showVisible.bind(this));
   }
 
@@ -18,7 +22,7 @@ class UserList extends React.Component {
     window.removeEventListener('scroll', this.showVisible.bind(this));
   }
 
-  UserList() {
+  userList() {
     axios.get('https://jsonplaceholder.typicode.com/photos')
       .then(res => {
         const images = res.data.map(obj => obj);
@@ -56,7 +60,4 @@ class UserList extends React.Component {
   }
 }
 
-ReactDOM.render(
-    <UserList/>,
-    document.getElementById('root')
-)
+export default UserList;
