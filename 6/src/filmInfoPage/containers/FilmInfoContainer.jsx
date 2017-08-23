@@ -36,7 +36,7 @@ class FilmInfoContainer extends React.Component{
     render(){
         return(
             <div className="filmInfoContainer">
-                <Header dispatch={this.props.onLogOut} userName={this.props.currentUser}/>
+                <Header logOut={this.props.onLogOut} userName={this.props.currentUser}/>
                 <FilmInfo film={this.props.film}/>
                 <ScreenshotGallery galery={this.props.film.backdrops}/>
                 <div className="filmInfoContainer__comments">

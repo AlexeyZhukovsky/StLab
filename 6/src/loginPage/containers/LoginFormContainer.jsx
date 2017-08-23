@@ -52,7 +52,7 @@ class LoginFormContainer extends React.Component{
             alert('nety takogo')
         }
         if(this.props.testStore.loginPageReducer.currentUser !== null){
-            this.props.history.push({pathname: '/1'});
+            this.props.history.push({pathname: '/filmList'});
         }
     }
 }

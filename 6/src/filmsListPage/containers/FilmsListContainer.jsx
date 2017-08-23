@@ -18,7 +18,7 @@ class FilmsListContainer extends React.Component{
         return(
             <div className="filmsListContainer">
                 {console.log(this.props)}
-                <Header dispatch={this.props.onLogOut} pathName={this.props.history.location.pathname} userName={this.props.currentUser}/>
+                <Header logOut={this.props.onLogOut} pathName={this.props.history.location.pathname} userName={this.props.currentUser}/>
                 <div className="filmsListContainer__filmsList">
                     <SearchFilm dispatch = {this.props.search}/>
                     <Films d={this.props.films}/>  

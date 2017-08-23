@@ -16,13 +16,12 @@ const FilmItem = ({imgUrl, id, name, overview}) => {
                 <div className="textPart">
                     <div className="textPart__filmInfo">
                         <ul className="filmInfoList">
-                            {/* <li className="filmInfoList__item">{id}</li> */}
                             <li className="filmInfoList__item filmInfoList__item--title">{name}</li>
                             <li className="filmInfoList__item">{overview}</li>
                         </ul>
                     </div>
                     <div className="textPart__link">
-                        <Link className="moreInfoLink" to={{ pathname: '/2/'+ id }}>More Info</Link>
+                        <Link className="moreInfoLink" to={{ pathname: '/filmInfo/'+ id }}>More Info</Link>
                     </div>
                 </div>
             </div>
