@@ -1,0 +1,5 @@
+#folder modules
+node_modules/
+
+#bundle
+dist/
