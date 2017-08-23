@@ -4,7 +4,6 @@ import CommentItem from 'filmInfoPage/components/commentItem';
 import 'filmInfoPage/styles/comments';
 
 const Comments = ({d}) => {
-    console.log("DDD",d)
     let comments;
     if(d !== undefined){
         comments = d.comments.map((comment, index) => {return (<CommentItem 
@@ -14,9 +13,8 @@ const Comments = ({d}) => {
             commentText={comment.commentText}
            />
         )});
-        console.log("aaaaaaaaaa",comments)
     }else{
-        comments = "noooo";
+        comments = 'No comments';
     }
     
     return (
