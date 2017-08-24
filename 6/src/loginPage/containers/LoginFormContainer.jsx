@@ -2,7 +2,6 @@ import React from 'react';
 import { HashRouter, Redirect } from 'react-router-dom';
 import {connect} from 'react-redux';
 
-import load from 'helpers/load';
 import {addData} from 'loginPage/actions/loginPageActions';
 import {setUser} from 'loginPage/actions/loginPageActions';
 
@@ -13,16 +12,20 @@ class LoginFormContainer extends React.Component{
     }
     
     componentDidMount(){
-        load('https://api.themoviedb.org/3/list/1?api_key=ef67a2155c49b98d383b4d9bd03f78ae').then(data => {
-            let filmsData = JSON.parse(data).items;
-            console.log(filmsData);
-            filmsData.map((item)=>{ 
-                load('https://api.themoviedb.org/3/movie/'+item.id+'/images?api_key=ef67a2155c49b98d383b4d9bd03f78ae').then(b => { 
-                item.backdrops = JSON.parse(b).backdrops;
-                })});
-            console.log(filmsData);
-            this.props.onSaveResult(filmsData)
-        });  
+        fetch('https://api.themoviedb.org/3/list/1?api_key=ef67a2155c49b98d383b4d9bd03f78ae')
+            .then( response => 
+                response.json())
+            .then((data) => {
+                return data.items})
+            .then(item => {
+                item.map( (i) => {
+                fetch('https://api.themoviedb.org/3/movie/'+i.id+'/images?api_key=ef67a2155c49b98d383b4d9bd03f78ae')
+                    .then(response => 
+                        response.json())
+                    .then(val => i.backdrops = val.backdrops);
+                })
+                this.props.onSaveResult(item);
+            })
     }
     
     render(){
