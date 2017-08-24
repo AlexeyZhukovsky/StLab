@@ -3,18 +3,21 @@ import ReactDOM from 'react-dom';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { createHashHistory } from 'history';
 import {Provider} from 'react-redux';
-import {createStore, Dispatch} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import {Route, Switch, HashRouter} from 'react-router-dom';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
+
 
 import LoginFormContainer from 'loginPage/containers/LoginFormContainer';
 import FilmsListContainer from 'filmsListPage/containers/FilmsListContainer';
 import FilmInfoContainer from 'filmInfoPage/containers/FilmInfoContainer';
 import appReducer from 'reducers/appReducer';
-import load from 'helpers/load';
+
 
 import '../src/app.less';
 
-const store = createStore(appReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(appReducer, composeWithDevTools(applyMiddleware(thunk)));
 store.subscribe(() => {"store",console.log(store.getState())})
 const history = syncHistoryWithStore(createHashHistory(),store);
 

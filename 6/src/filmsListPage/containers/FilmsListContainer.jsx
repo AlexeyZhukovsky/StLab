@@ -6,7 +6,7 @@ import 'filmsListPage/styles/filmsListContainer';
 
 import SearchFilm from 'filmsListPage/components/searchFilm';
 import Films from 'filmsListPage/components/films';
-import search from 'filmsListPage/actions/filmListPageActions';
+import {search, getFilms} from 'filmsListPage/actions/filmListPageActions';
 import {setUser} from 'loginPage/actions/loginPageActions';
 
 class FilmsListContainer extends React.Component{
@@ -14,6 +14,10 @@ class FilmsListContainer extends React.Component{
         super(props);
     }
     
+    componentDidMount(){
+    this.props.getFilms('https://api.themoviedb.org/3/list/1?api_key=ef67a2155c49b98d383b4d9bd03f78ae');
+    }
+
     render(){
         return(
             <div className="filmsListContainer">
@@ -40,6 +44,8 @@ const mapDispatchToProps = (dispatch) => ({
     },
     onLogOut: (user) => {
         dispatch(setUser(user));
+    },
+    getFilms: (url) => {dispatch(getFilms(url));
     }
 });
 

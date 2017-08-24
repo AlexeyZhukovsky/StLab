@@ -16,11 +16,7 @@ const initialState = [
     }
 ];
 
-const init = {    
-    
-}
-
-export default function filmInfoReducer(state = initialState, action){ 
+export function filmInfoReducer(state = initialState, action){ 
     switch(action.type){
         case 'TEST':
             return action.payload;
@@ -35,6 +31,36 @@ export default function filmInfoReducer(state = initialState, action){
             }
         default:
             return state
+    }
+}
+
+export function imagesHasErrored(state = false, action) {
+    switch (action.type) {
+        case 'IMAGES_HAS_ERRORED':
+            return action.hasErrored;
+ 
+        default:
+            return state;
+    }
+}
+ 
+export function imagesIsLoading(state = false, action) {
+    switch (action.type) {
+        case 'IMAGES_IS_LOADING':
+            return action.isLoading;
+ 
+        default:
+            return state;
+    }
+}
+ 
+export function images(state = [], action) {
+    switch (action.type) {
+        case 'GET_IMAGES_SUCCESS':
+            return action.payload;
+ 
+        default:
+            return state;
     }
 }
 
