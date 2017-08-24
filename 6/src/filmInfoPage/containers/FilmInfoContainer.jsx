@@ -16,6 +16,9 @@ import 'filmInfoPage/styles/filmInfoContainer';
 class FilmInfoContainer extends React.Component{
     constructor(props){
         super(props);
+        this.state = {
+            commentText: ''
+        }
     }
 
     componentDidMount(){
@@ -29,15 +32,20 @@ class FilmInfoContainer extends React.Component{
             comments:[{
                 userName: this.props.currentUser.login,
                 date: formatDate(new Date),
-                commentText: this.commentText.value
+                commentText: this.state.commentText
             }]
         }
-        if (this.commentText.value !== ''){
+        if (this.state.commentText !== ''){
             this.props.onAddComment(commentItem)
         }else{
             alert("add comment text");
         }
-        this.commentText.value = '';
+        this.setState({commentText: ''});
+    }
+
+    getCommentText(e){
+        // console.log(e.target.value)
+       this.setState({commentText: e.target.value}) 
     }
 
     ratingChanged(newRating){
@@ -61,7 +69,7 @@ class FilmInfoContainer extends React.Component{
                 <div className="filmInfoContainer__comments">
                     <Comments d={this.props.com}/>
                     <div className="addComentBlock">
-                        <textarea className="addComentBlock__textarea" rows="5" ref={(textarea) => this.commentText = textarea }></textarea>
+                        <textarea className="addComentBlock__textarea" rows="5"  onChange={this.getCommentText.bind(this)}></textarea>
                         <button className="addComentBlock__btn" onClick={this.addComment.bind(this)}>Add comment</button>
                     </div> 
                 </div>
