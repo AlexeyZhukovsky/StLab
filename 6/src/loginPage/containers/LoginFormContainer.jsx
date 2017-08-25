@@ -15,24 +15,7 @@ class LoginFormContainer extends React.Component{
         }
        
     }
-    
-    componentDidMount(){
-        fetch('https://api.themoviedb.org/3/list/1?api_key=ef67a2155c49b98d383b4d9bd03f78ae')
-            .then( response => 
-                response.json())
-            .then((data) => {
-                return data.items})
-            .then(item => {
-                item.map( (i) => {
-                fetch('https://api.themoviedb.org/3/movie/'+i.id+'/images?api_key=ef67a2155c49b98d383b4d9bd03f78ae')
-                    .then(response => 
-                        response.json())
-                    .then(val => i.backdrops = val.backdrops);
-                })
-                this.props.onSaveResult(item);
-            })
-    }
-
+   
     getLogin(e){
         this.setState({login: e.target.value});
     }
@@ -40,7 +23,6 @@ class LoginFormContainer extends React.Component{
     getPassword(e){
         this.setState({password: e.target.value});
     }
-
     
     render(){
         return(
@@ -54,7 +36,6 @@ class LoginFormContainer extends React.Component{
 
     setUser(e){
         e.preventDefault();
-        console.log(this.props.testStore.loginPageReducer.data)
         const userInfo = {
             login: this.state.login,
             password: this.state.password
@@ -80,9 +61,6 @@ export default connect(
         ownProps: ownProps
     }),
     dispatch => ({ 
-        onSaveResult: (data) => {
-            dispatch(addData(data));
-        },
         onSetUser: (user) =>{
             dispatch(setUser(user));
         }

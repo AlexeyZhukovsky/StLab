@@ -6,9 +6,7 @@ const initialState = {
         {login: 'Fred', password: '222'},
         {login: 'Jon', password: '333'}    
     ],
-    data: [],
-    currentUser: null,
-    active: 0
+    currentUser: '',
 };
 
 export default function loginPageReducer(state = initialState, action){
@@ -24,5 +22,4 @@ export default function loginPageReducer(state = initialState, action){
             default:
                 return state;
     }
-
 }; 

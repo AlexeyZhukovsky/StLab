@@ -51,13 +51,11 @@ export function getImages(url) {
                 if(!response.ok){
                     throw Error(response.statusText);
                 }
-
                 dispatch(imagesIsLoading(false));
-
                 return response;
             })
             .then((response) => response.json())
-            .then((data) => {return data.backdrops})                    
+            .then((data) => {return data.backdrops})                   
             .then((items) => dispatch(getImagesSuccess(items)))
     }
 }

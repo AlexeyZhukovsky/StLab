@@ -104,7 +104,6 @@ export function images(state = [], action) {
     switch (action.type) {
         case GET_IMAGES_SUCCESS:
             return action.payload;
- 
         default:
             return state;
     }

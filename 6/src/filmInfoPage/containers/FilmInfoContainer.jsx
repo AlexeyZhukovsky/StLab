@@ -24,6 +24,7 @@ class FilmInfoContainer extends React.Component{
     componentDidMount(){
         const url = 'https://api.themoviedb.org/3/movie/' + this.props.filmId + '/images?api_key=ef67a2155c49b98d383b4d9bd03f78ae';
         this.props.onGetImages(url);
+        
     }
 
     addComment(e){
@@ -89,11 +90,11 @@ class FilmInfoContainer extends React.Component{
                         color2={'#ffd700'} 
                  />
                 <p>{this.setAverageRating()}</p>
-                <ScreenshotGallery galery={this.props.film.backdrops}/>
+                <ScreenshotGallery galery={this.props.filmImages}/>
                 <div className="filmInfoContainer__comments">
                     <Comments d={this.props.com}/>
                     <div className="addComentBlock">
-                        <textarea className="addComentBlock__textarea" rows="5"  onChange={this.getCommentText.bind(this)}></textarea>
+                        <textarea className="addComentBlock__textarea" rows="5" value={this.state.commentText}  onChange={this.getCommentText.bind(this)}></textarea>
                         <button className="addComentBlock__btn" onClick={this.addComment.bind(this)}>Add comment</button>
                     </div> 
                 </div>
@@ -105,7 +106,8 @@ class FilmInfoContainer extends React.Component{
 const mapStateToProps = (state, ownProps) => {    
     return { 
         filmId: ownProps.match.params.id,
-        film: state.loginPageReducer.data[0].find(film => film.id === Number(ownProps.match.params.id)),
+        film: state.films.find(film => film.id === Number(ownProps.match.params.id)),
+        filmImages: state.images,
         com: state.filmInfoReducer.find(c => c.id == Number(ownProps.match.params.id)),
         currentUser: state.loginPageReducer.currentUser,
         filmRating: state.setFilmRating.find(c => c.id == Number(ownProps.match.params.id))

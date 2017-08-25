@@ -35,7 +35,7 @@ class FilmsListContainer extends React.Component{
 const mapStateToProps = (state) => {
     return{
         currentUser: state.loginPageReducer.currentUser,
-        films: state.loginPageReducer.data[0].filter(film => film.title.toLowerCase().includes(state.filmListReducer.toLowerCase()))
+        films: state.films.filter(film => film.title.toLowerCase().includes(state.filmListReducer.toLowerCase()))
     }
 };
 const mapDispatchToProps = (dispatch) => ({
