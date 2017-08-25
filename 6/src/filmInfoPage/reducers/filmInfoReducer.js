@@ -1,3 +1,11 @@
+import {
+    ADD_COMMENT,
+    IMAGES_HAS_ERRORED,
+    IMAGES_IS_LOADING, 
+    GET_IMAGES_SUCCESS,
+    SET_FILM_RATING
+} from 'filmInfoPage/actions/filmInfoPageActionsTypes';
+
 const initialState = [
     {
         id: '284053',
@@ -35,9 +43,7 @@ const initialRating= [
 
 export function filmInfoReducer(state = initialState, action){ 
     switch(action.type){
-        case 'TEST':
-            return action.payload;
-        case 'ADD_COMMENT':
+        case ADD_COMMENT:
             let findId = state.find(el => el.id == action.payload.id);
             let ind = state.findIndex(el => el.id == action.payload.id);
             if(findId !== undefined){
@@ -50,8 +56,6 @@ export function filmInfoReducer(state = initialState, action){
             return state
     }
 }
-
-const SET_FILM_RATING = 'SET_FILM_RATING';
 
 export function setFilmRating(state = initialRating, action){
     switch(action.type){
@@ -78,7 +82,7 @@ export function setFilmRating(state = initialRating, action){
 
 export function imagesHasErrored(state = false, action) {
     switch (action.type) {
-        case 'IMAGES_HAS_ERRORED':
+        case IMAGES_HAS_ERRORED:
             return action.hasErrored;
  
         default:
@@ -88,7 +92,7 @@ export function imagesHasErrored(state = false, action) {
  
 export function imagesIsLoading(state = false, action) {
     switch (action.type) {
-        case 'IMAGES_IS_LOADING':
+        case IMAGES_IS_LOADING:
             return action.isLoading;
  
         default:
@@ -98,7 +102,7 @@ export function imagesIsLoading(state = false, action) {
  
 export function images(state = [], action) {
     switch (action.type) {
-        case 'GET_IMAGES_SUCCESS':
+        case GET_IMAGES_SUCCESS:
             return action.payload;
  
         default:

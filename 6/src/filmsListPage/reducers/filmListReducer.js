@@ -1,6 +1,13 @@
+import {
+    SEARCH_FILM,
+    FILMS_HAS_ERRORED,
+    FILMS_IS_LOADING, 
+    GET_FILMS_SUCCESS
+} from 'filmsListPage/actions/filmsListPageActionsTypes';
+
 export function filmListReducer(state = '', action){ 
     switch(action.type){
-        case 'SEARCH_FILM':
+        case SEARCH_FILM:
             return action.payload;
         default:
             return state
@@ -9,7 +16,7 @@ export function filmListReducer(state = '', action){
 
 export function filmsHasErrored(state = false, action) {
     switch (action.type) {
-        case 'FILMS_HAS_ERRORED':
+        case FILMS_HAS_ERRORED:
             return action.hasErrored;
  
         default:
@@ -19,7 +26,7 @@ export function filmsHasErrored(state = false, action) {
  
 export function filmsIsLoading(state = false, action) {
     switch (action.type) {
-        case 'FILMS_IS_LOADING':
+        case FILMS_IS_LOADING:
             return action.isLoading;
  
         default:
@@ -29,7 +36,7 @@ export function filmsIsLoading(state = false, action) {
  
 export function films(state = [], action) {
     switch (action.type) {
-        case 'GET_FILMS_SUCCESS':
+        case GET_FILMS_SUCCESS:
             return action.payload;
  
         default:

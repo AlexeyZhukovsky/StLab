@@ -1,27 +1,34 @@
+import {
+    SEARCH_FILM,
+    FILMS_HAS_ERRORED,
+    FILMS_IS_LOADING, 
+    GET_FILMS_SUCCESS
+} from 'filmsListPage/actions/filmsListPageActionsTypes';
+
 export function search(data){
     return{
-        type: 'SEARCH_FILM',
+        type: SEARCH_FILM,
         payload: data
     }
 }
 
 export function filmsHasErrored(bool) {
     return {
-        type: 'FILMS_HAS_ERRORED',
+        type: FILMS_HAS_ERRORED,
         hasErrored: bool
     };
 }
 
 export function filmsIsLoading(bool) {
     return {
-        type: 'FILMS_IS_LOADING',
+        type: FILMS_IS_LOADING,
         isLoading: bool
     };
 }
 
 export function getFilmsSuccess(items) {
     return {
-        type: 'GET_FILMS_SUCCESS',
+        type: GET_FILMS_SUCCESS,
         payload: items
     };
 }

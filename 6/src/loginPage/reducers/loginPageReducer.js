@@ -1,3 +1,5 @@
+import {SET_USER} from 'loginPage/actions/loginPageActionsTypes';
+
 const initialState = {
     users: [
         {login: 'Alex', password: '111'},
@@ -15,7 +17,7 @@ export default function loginPageReducer(state = initialState, action){
             return Object.assign({},state,{
                 data: [...state.data, action.payload]
             });
-        case 'SET_USER':
+        case SET_USER:
             return Object.assign({},state,{
                 currentUser: action.payload
             });

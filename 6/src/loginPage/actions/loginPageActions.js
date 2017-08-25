@@ -1,3 +1,5 @@
+import {SET_USER} from 'loginPage/actions/loginPageActionsTypes';
+
 export function addData(value){
     return{
         type: 'ADD_DATA',
@@ -7,7 +9,7 @@ export function addData(value){
 
 export function setUser(value){
     return{
-        type: 'SET_USER',
+        type: SET_USER,
         payload: value
     }
 }
