@@ -6,10 +6,10 @@ const initialState = {
         {login: 'Fred', password: '222'},
         {login: 'Jon', password: '333'}    
     ],
-    currentUser: '',
+    currentUser: {login: 'Alex', password: '111'},
 };
 
-export default function loginPageReducer(state = initialState, action){
+export default function loginUser(state = initialState, action){
     switch (action.type){
         case 'ADD_DATA':
             return Object.assign({},state,{

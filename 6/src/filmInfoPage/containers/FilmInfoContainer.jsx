@@ -109,7 +109,7 @@ const mapStateToProps = (state, ownProps) => {
         film: state.films.find(film => film.id === Number(ownProps.match.params.id)),
         filmImages: state.images,
         com: state.filmInfoReducer.find(c => c.id == Number(ownProps.match.params.id)),
-        currentUser: state.loginPageReducer.currentUser,
+        currentUser: state.loginUser.currentUser,
         filmRating: state.setFilmRating.find(c => c.id == Number(ownProps.match.params.id))
     }
 };

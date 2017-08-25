@@ -34,7 +34,7 @@ class FilmsListContainer extends React.Component{
 
 const mapStateToProps = (state) => {
     return{
-        currentUser: state.loginPageReducer.currentUser,
+        currentUser: state.loginUser.currentUser,
         films: state.films.filter(film => film.title.toLowerCase().includes(state.filmListReducer.toLowerCase()))
     }
 };

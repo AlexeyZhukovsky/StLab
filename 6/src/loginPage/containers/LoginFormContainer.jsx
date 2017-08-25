@@ -40,8 +40,8 @@ class LoginFormContainer extends React.Component{
             login: this.state.login,
             password: this.state.password
         };
-        if (this.props.testStore.loginPageReducer.users.find(user => user.login == userInfo.login)){
-            if(this.props.testStore.loginPageReducer.users.find(user => user.password == userInfo.password)){
+        if (this.props.testStore.loginUser.users.find(user => user.login == userInfo.login)){
+            if(this.props.testStore.loginUser.users.find(user => user.password == userInfo.password)){
                 this.props.onSetUser(userInfo);
             } else{
                  alert('Pass fall')
@@ -49,7 +49,7 @@ class LoginFormContainer extends React.Component{
         } else{
             alert('nety takogo')
         }
-        if(this.props.testStore.loginPageReducer.currentUser !== null){
+        if(this.props.testStore.loginUser.currentUser !== null){
             this.props.history.push({pathname: '/filmList'});
         }
     }
