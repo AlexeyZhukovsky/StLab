@@ -16,6 +16,23 @@ const initialState = [
     }
 ];
 
+const initialRating= [
+    {
+        id: '284053',
+        rating: [
+            { 
+                userName: 'Roma',
+                stars: 5
+                 
+            },
+            { 
+                userName: 'Andrey',
+                stars: 2
+            }
+        ] 
+    }
+];
+
 export function filmInfoReducer(state = initialState, action){ 
     switch(action.type){
         case 'TEST':
@@ -26,6 +43,31 @@ export function filmInfoReducer(state = initialState, action){
             if(findId !== undefined){
                 let newState =  Object.assign({},state[ind], {comments:[...state[ind].comments, action.payload.comments[0]]});
                 return state.map(a => {if(a.id = action.payload.id){return newState}else{return a}})
+            }else{
+                return [...state, action.payload]
+            }
+        default:
+            return state
+    }
+}
+
+const SET_FILM_RATING = 'SET_FILM_RATING';
+
+export function setFilmRating(state = initialRating, action){
+    switch(action.type){
+        case SET_FILM_RATING:
+            let findId = state.find(el => el.id == action.payload.id);
+            let ind = state.findIndex(el => el.id == action.payload.id);
+            if(findId !== undefined){
+                let findUser = state[ind].rating.find(el => el.userName == action.payload.rating[0].userName);
+                let userInd = state[ind].rating.findIndex(el => el.userName == action.payload.rating[0].userName);
+                if(findUser !== undefined){
+                    let newState =  Object.assign({},state[ind], {rating: Object.assign([],state[ind].rating,state[ind].rating[userInd] = action.payload.rating[0])});
+                    return state.map(a => {if(a.id = action.payload.id){return newState}else{return a}})
+                }else{
+                    let newState =  Object.assign({},state[ind], {rating:[...state[ind].rating, action.payload.rating[0]]});
+                    return state.map(a => {if(a.id = action.payload.id){return newState}else{return a}})
+                }    
             }else{
                 return [...state, action.payload]
             }

@@ -7,7 +7,7 @@ import Header from 'components/header';
 import FilmInfo from 'filmInfoPage/components/filmInfo';
 import Comments from 'filmInfoPage/components/comments';
 import ScreenshotGallery from 'filmInfoPage/components/screenshotGallery';
-import {addCommentAction, getImages} from 'filmInfoPage/actions/filmInfoPageActions';
+import {addCommentAction, getImages, setFilmRating} from 'filmInfoPage/actions/filmInfoPageActions';
 import formatDate from 'helpers/formatDate';
 import {setUser} from 'loginPage/actions/loginPageActions';
 
@@ -22,8 +22,8 @@ class FilmInfoContainer extends React.Component{
     }
 
     componentDidMount(){
-        const url = 'https://api.themoviedb.org/3/movie/'+this.props.filmId+'/images?api_key=ef67a2155c49b98d383b4d9bd03f78ae';
-        this.props.getImages(url);
+        const url = 'https://api.themoviedb.org/3/movie/' + this.props.filmId + '/images?api_key=ef67a2155c49b98d383b4d9bd03f78ae';
+        this.props.onGetImages(url);
     }
 
     addComment(e){
@@ -44,12 +44,35 @@ class FilmInfoContainer extends React.Component{
     }
 
     getCommentText(e){
-        // console.log(e.target.value)
        this.setState({commentText: e.target.value}) 
     }
 
     ratingChanged(newRating){
-        console.log(newRating)
+        const rating = {
+            id: this.props.filmId,
+            rating:[{
+                userName: this.props.currentUser.login,
+                stars: newRating
+            }]
+        }
+        this.props.onSetFilmRating(rating);
+    }
+
+    setAverageRating(){
+        let averageRating; 
+
+        if(this.props.filmRating !== undefined){
+            let starsArray = this.props.filmRating.rating.map(user => user.stars);
+            let sumStars = starsArray.reduce(function(previousValue, currentValue) {
+                return previousValue + currentValue;
+                })
+
+            averageRating = sumStars / starsArray.length;      
+        }else{
+            averageRating = 0; 
+        }
+
+        return averageRating;
     }
 
     render(){
@@ -58,13 +81,14 @@ class FilmInfoContainer extends React.Component{
                 <Header logOut={this.props.onLogOut} userName={this.props.currentUser}/>
                 <FilmInfo film={this.props.film}/>
                 <ReactStars
-                        value ={3}
+                        value ={this.setAverageRating()}
                         count={5}
                         onChange={this.ratingChanged.bind(this)}
                         size={24}
                         color1={'red'}
                         color2={'#ffd700'} 
                  />
+                <p>{this.setAverageRating()}</p>
                 <ScreenshotGallery galery={this.props.film.backdrops}/>
                 <div className="filmInfoContainer__comments">
                     <Comments d={this.props.com}/>
@@ -83,7 +107,8 @@ const mapStateToProps = (state, ownProps) => {
         filmId: ownProps.match.params.id,
         film: state.loginPageReducer.data[0].find(film => film.id === Number(ownProps.match.params.id)),
         com: state.filmInfoReducer.find(c => c.id == Number(ownProps.match.params.id)),
-        currentUser: state.loginPageReducer.currentUser 
+        currentUser: state.loginPageReducer.currentUser,
+        filmRating: state.setFilmRating.find(c => c.id == Number(ownProps.match.params.id))
     }
 };
 
@@ -94,8 +119,11 @@ const mapDispatchToProps = (dispatch) => ({
     onLogOut: (user) => {
         dispatch(setUser(user));
     },
-    getImages: (url) => {
+    onGetImages: (url) => {
         dispatch(getImages(url));
+    },
+    onSetFilmRating: (rating) => {
+        dispatch(setFilmRating(rating));
     }
 
 });

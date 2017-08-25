@@ -26,6 +26,13 @@ export function getImagesSuccess(items) {
     };
 }
 
+export function setFilmRating(rating){
+    return {
+        type: 'SET_FILM_RATING',
+        payload: rating    
+    }
+}
+
 export function getImages(url) {
     return(dispatch) => {
         dispatch(imagesIsLoading(true));
@@ -41,8 +48,9 @@ export function getImages(url) {
                 return response;
             })
             .then((response) => response.json())
-            .then((data) => {return data.backdrops})                    // возможно не нужно!
+            .then((data) => {return data.backdrops})                    
             .then((items) => dispatch(getImagesSuccess(items)))
-            
     }
 }
+
+
