@@ -1,0 +1,62 @@
+.filmItem{
+    display: flex;
+    border: solid 2px black;
+    margin: 10px 0;
+
+    &__img{
+        height: 220px;
+    }
+
+    &__textPart{
+        padding-left: 20px;
+    }
+}
+
+.textPart{
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px; 
+
+    &__filmInfo{
+         list-style-type: none;
+    }
+
+    &__link{
+        display: flex;
+        // width: 100px;
+        height: 30px;
+        margin: 10px 10px;
+        justify-content: flex-end;
+        
+    }
+}
+
+.filmInfoList{
+    list-style-type: none;
+    height: 120px; 
+
+    &__item{
+        max-height: 80px;
+        
+        &--title{
+            font-size: 20px;
+            font-weight: bolder;
+            margin-bottom: 10px; 
+        }
+
+    }
+}
+.moreInfoLink{
+    // background-color: whitesmoke;
+    // padding: 10px 20px; 
+    // margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    color: #34495e;
+   
+}
+
+.moreInfoLink:hover{
+    color: white;
+}

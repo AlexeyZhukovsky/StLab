@@ -1,0 +1,29 @@
+{
+    "films": 
+    [
+        {
+            "id": "1",
+            "name": "startreck",
+            "year": "1989",
+            "director": "vasia"
+        },
+        {
+            "id": "2",
+            "name": "startreck15",
+            "year": "1889",
+            "director": "gosha"
+        },
+        {
+            "id": "3",
+            "name": "startreck20",
+            "year": "1339",
+            "director": "ll"
+        },
+        {
+            "id": "4",
+            "name": "startreck30",
+            "year": "1779",
+            "director": "petia"
+        }
+    ]
+}
