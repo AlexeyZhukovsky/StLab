@@ -1,0 +1,16 @@
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\obj\Debug\FilmsCatalog.DAL.csprojResolveAssemblyReference.cache
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\bin\Debug\FilmsCatalog.DAL.dll.config
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\bin\Debug\FilmsCatalog.DAL.dll
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\bin\Debug\FilmsCatalog.DAL.pdb
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\bin\Debug\EntityFramework.dll
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\bin\Debug\EntityFramework.xml
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\obj\Debug\FilmsCatalog.DAL.dll
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\obj\Debug\FilmsCatalog.DAL.pdb
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\bin\Debug\FilmsCatalog.DAL.dll.CodeAnalysisLog.xml
+D:\MVC\FilmsCatalog\FilmsCatalog.DAL\bin\Debug\FilmsCatalog.DAL.dll.lastcodeanalysissucceeded
